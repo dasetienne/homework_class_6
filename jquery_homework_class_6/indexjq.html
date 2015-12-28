@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+
+		<style>
+			.wrapper {
+				width: 800px;
+				height: 1000px;
+				margin-left: 200px;
+				margin-right: 200px;
+				background-color: #94fb92;
+				float: left;
+
+			}
+
+			h1 {
+				color: blue;
+				text-align: center;
+				background-color: lightblue;
+
+			}
+			
+
+			h3 {
+				color: black; 
+				text-align: center;
+				background-color: orange;
+
+			}
+
+			li {
+				text-align: center;
+				padding: 1px;
+				text-decoration: none;
+				list-style: none;
+				margin: 10px;
+
+			}
+
+		</style>
+
+
+
+
+		<title>JQUERY TEST</title>
+
+
+		
+
+		<!-- For some reason I was not able to link my css stylesheet -->
+
+
+	</head>
+	<body>
+		<div class= "wrapper">
+
+			<h1>This is the headline</h1>
+
+			<h3>This is the subheader</h3>
+
+		<div class= "paragraph1">
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+
+		<div class= "paragraph2">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+		<div class= "paragraph3">
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+
+
+			<ul>
+				<li>Item1</li>
+				<li>Item2</li>
+				<li>Item3</li>
+				<li>Item4</li>
+			</ul>
+
+		</div>
+
+		<script src="jquery-2.1.4.js"></script>
+
+
+
+		<script>
+			$(document).ready(function() {
+
+ 				$("h1").click(function() {
+         	 		alert("You have clicked the headline!");
+        		});
+
+        		// I tried a couple of other click functions but they did not work.
+
+
+
+        		$("li").fadeOut(4000, function() {
+        			$("li").fadeIn(4000);
+        		});
+
+        		$(".paragraph1").hide(3000, function() {
+         			$("paragraph1").show(3000);
+         		});
+
+         		$(".paragraph2").animate( {
+					opacity: 0.50,
+					width: "70%"
+					} , 2000 );
+
+         		// Shirmung: If I close the tag for the animation as I did for the previous function, all jquery function stop working. Why is that?
+
+
+
+
+
+         		// });
+
+			});
+		</script>
+
+
+	</body>
+</html>
