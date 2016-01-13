@@ -144,7 +144,7 @@ function simpleFunction (firstNumber, secondNumber){
 alert(simpleFunction(20,14));
 
 
-function simeplePhrase (aName, anAttribute){
+function simplePhrase (aName, anAttribute){
 	return aName + "is" + anAttribute;
 };
 
